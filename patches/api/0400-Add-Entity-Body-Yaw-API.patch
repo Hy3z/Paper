@@ -5,10 +5,10 @@ Subject: [PATCH] Add Entity Body Yaw API
 
 
 diff --git a/src/main/java/org/bukkit/entity/Entity.java b/src/main/java/org/bukkit/entity/Entity.java
-index 909926485a66e09988f7787b1d5ee2cf9c012558..17d5a5458ee51d8db243326745875ef31ba95fb3 100644
+index 2d6f7b2bf4cb23ef43a4dcbab2ecd2a7c7c2809c..0be4107270fb7fdba5c7d0e6f3964d33337f91f0 100644
 --- a/src/main/java/org/bukkit/entity/Entity.java
 +++ b/src/main/java/org/bukkit/entity/Entity.java
-@@ -1020,6 +1020,43 @@ public interface Entity extends Metadatable, CommandSender, Nameable, Persistent
+@@ -1026,6 +1026,43 @@ public interface Entity extends Metadatable, CommandSender, Nameable, Persistent
       * @return true if in powdered snow.
       */
      boolean isInPowderedSnow();
@@ -53,14 +53,15 @@ index 909926485a66e09988f7787b1d5ee2cf9c012558..17d5a5458ee51d8db243326745875ef3
  
      // Paper start - Collision API
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index 3a26b3c40f877a454c3c76b68b86776f05950002..b7b87b2962eabcf2e8864335e4da22c0b9da8e5c 100644
+index 017a743c1445e2c859fef0ef962e656035af12bd..b8a9b56c3071d94371ab69b1a72c2e6c0692ab39 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -1280,5 +1280,21 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
-      * @param amount the amount of damage to do
+@@ -1412,4 +1412,22 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
       */
      void damageItemStack(org.bukkit.inventory.@NotNull EquipmentSlot slot, int amount);
+     // Paper end - ItemStack damage API
 +
++    // Paper start - body yaw API
 +    /**
 +     * Gets entity body yaw
 +     *
@@ -76,5 +77,5 @@ index 3a26b3c40f877a454c3c76b68b86776f05950002..b7b87b2962eabcf2e8864335e4da22c0
 +     * @see Location#setYaw(float)
 +     */
 +    void setBodyYaw(float bodyYaw);
-     // Paper end
++    // Paper end - body yaw API
  }

@@ -5,20 +5,18 @@ Subject: [PATCH] Add LivingEntity#clearActiveItem
 
 
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index 3969f3c188211838cb576465bd64c0f63ae85080..9d58da4686a22893455b9cc75fb8e73a87d2d06d 100644
+index 7dbb3737cd175365b89a5c8d0542b16e812b8629..bd871bf479cb9f4b31832ac5cb363f314b32a047 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -996,6 +996,13 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
-     @NotNull
-     org.bukkit.inventory.ItemStack getActiveItem();
+@@ -1059,6 +1059,11 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+      */
+     org.bukkit.inventory.@NotNull ItemStack getActiveItem();
  
-+    // Paper start
 +    /**
 +     * Interrupts any ongoing active "usage" or consumption or an item.
 +     */
 +    void clearActiveItem();
-+    // Paper end
 +
      /**
-      * Get's remaining time a player needs to keep hands raised with an item to finish using it.
-      * @return Remaining ticks to use the item
+      * Gets the remaining number of ticks for {@link #getActiveItem()}'s usage.
+      *

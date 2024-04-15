@@ -417,10 +417,10 @@ index 9e7f42caab1204036f4203354c115fd40c6def92..138d2530de2410f4a9424dabd3e5ce0c
 +    // Paper end
  }
 diff --git a/src/main/java/org/bukkit/entity/Entity.java b/src/main/java/org/bukkit/entity/Entity.java
-index d68ccecaadcf7a906058e66a750f4cfce5dd7b3f..578c22b0aef9c89a3c33b75c33bcdc60bdab6b49 100644
+index b32683b5e4431950d9dccec3ae11f6377c7b0da7..b2466aa08ebb26f3a5edd6a4b2c7e12f7a90ef0a 100644
 --- a/src/main/java/org/bukkit/entity/Entity.java
 +++ b/src/main/java/org/bukkit/entity/Entity.java
-@@ -283,6 +283,40 @@ public interface Entity extends Metadatable, CommandSender, Nameable, Persistent
+@@ -289,6 +289,40 @@ public interface Entity extends Metadatable, CommandSender, Nameable, Persistent
       */
      boolean isFrozen();
  
@@ -585,10 +585,10 @@ index 6b3c9bef9a8a34ddc6ff42cf358541a2665bf5e3..9c618a27d590f186f29c5d9094fc565e
 +    // Paper end
  }
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index b1fb059fc2249814c9e509c219da2aed84d34fe0..ff89fc699b7aaba982c59ace4effaffc5285ca17 100644
+index 42ece8fd69f35fe38d9e49eed1d578d19229d721..5d62d7393dde2ccf56e9c09d44e17fdde79cf760 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -960,6 +960,7 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+@@ -992,6 +992,7 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
       *
       * @param invisible If the entity is invisible
       */
@@ -596,7 +596,7 @@ index b1fb059fc2249814c9e509c219da2aed84d34fe0..ff89fc699b7aaba982c59ace4effaffc
      public void setInvisible(boolean invisible);
  
      /**
-@@ -967,6 +968,7 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+@@ -999,6 +1000,7 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
       *
       * @return Whether the entity is invisible
       */
@@ -604,11 +604,11 @@ index b1fb059fc2249814c9e509c219da2aed84d34fe0..ff89fc699b7aaba982c59ace4effaffc
      public boolean isInvisible();
  
      // Paper start
-@@ -1016,6 +1018,57 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
-     void clearActiveItem();
+@@ -1035,6 +1037,57 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+     void setShieldBlockingDelay(int delay);
      // Paper end
  
-+    // Paper start
++    // Paper start - missing entity API
 +    /**
 +     * Retrieves the sideways movement direction of the entity.
 +     * <p>
@@ -657,11 +657,11 @@ index b1fb059fc2249814c9e509c219da2aed84d34fe0..ff89fc699b7aaba982c59ace4effaffc
 +     * @return Forwards movement direction, ranging from -1 (backward) to 1 (forward).
 +     */
 +    float getForwardsMovement();
-+    // Paper end
++    // Paper end - missing entity API
 +
+     // Paper start - active item API
      /**
-      * Get's remaining time a player needs to keep hands raised with an item to finish using it.
-      * @return Remaining ticks to use the item
+      * Starts using the item in the specified hand, making it the
 diff --git a/src/main/java/org/bukkit/entity/Llama.java b/src/main/java/org/bukkit/entity/Llama.java
 index d23226ccb0f6c25028f000ce31346cd0a8898e6a..bc84b892cae5fe7019a3ad481e9da79956efa1fe 100644
 --- a/src/main/java/org/bukkit/entity/Llama.java

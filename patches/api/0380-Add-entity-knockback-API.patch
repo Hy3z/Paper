@@ -5,14 +5,15 @@ Subject: [PATCH] Add entity knockback API
 
 
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index aa20ec645476b2cbb0330c206f163094aebf238e..70953573a7bcfa682dbaeaa8e3db0c847b254fdd 100644
+index 35b0eb94e291dae7a4705fa85b10d23fcd38f49e..41c5559058df9701e345f39d9d3c23e45b6d49c3 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -1221,5 +1221,17 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
-             this.swingOffHand();
+@@ -1349,4 +1349,18 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
          }
      }
+     // Paper end - swing hand API
 +
++    // Paper start - knockback API
 +    /**
 +     * Knocks back this entity from a specific direction with a specified strength. Mechanics such
 +     * as knockback resistance will be factored in.
@@ -24,5 +25,5 @@ index aa20ec645476b2cbb0330c206f163094aebf238e..70953573a7bcfa682dbaeaa8e3db0c84
 +     * @param directionZ The relative z position of the knockback source direction
 +     */
 +    void knockback(double strength, double directionX, double directionZ);
-     // Paper end
++    // Paper end - knockback API
  }

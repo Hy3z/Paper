@@ -5,10 +5,10 @@ Subject: [PATCH] Stinger API
 
 
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index ff89fc699b7aaba982c59ace4effaffc5285ca17..41ca8fea2aede178bdbe87c05588bce4f2faf8e6 100644
+index 5d62d7393dde2ccf56e9c09d44e17fdde79cf760..be9fa1b6209a41712767283c6329046ca2795c09 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -419,6 +419,52 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+@@ -451,6 +451,52 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
      int getNextArrowRemoval();
      // Paper end - Add methods for working with arrows stuck in living entities
  

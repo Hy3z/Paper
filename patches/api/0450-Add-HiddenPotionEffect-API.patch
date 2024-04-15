@@ -5,10 +5,10 @@ Subject: [PATCH] Add HiddenPotionEffect API
 
 
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index 65dab533a33433bdd79601df4f109d9de6998fb8..5cb82901a5d0c8ee673501fc53389d526d4a5b6f 100644
+index 80df95e93b9a919af8c2e98b09b75522ee60eae6..65112eae8b92344796850b1e4c89e75443eab2fe 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -559,6 +559,9 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+@@ -591,6 +591,9 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
  
      /**
       * Adds the given {@link PotionEffect} to the living entity.
@@ -18,7 +18,7 @@ index 65dab533a33433bdd79601df4f109d9de6998fb8..5cb82901a5d0c8ee673501fc53389d52
       *
       * @param effect PotionEffect to be added
       * @return whether the effect could be added
-@@ -583,6 +586,9 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+@@ -615,6 +618,9 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
      /**
       * Attempts to add all of the given {@link PotionEffect} to the living
       * entity.

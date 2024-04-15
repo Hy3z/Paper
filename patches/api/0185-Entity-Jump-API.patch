@@ -61,14 +61,15 @@ index 0000000000000000000000000000000000000000..a6306c957fcacdcbcc8037b4ee33a167
 +    }
 +}
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index c58f7b4a7c05e35056a478a818a9a6cdfe99203f..3f062e0fe9cb632dece9ce3fdc985ab1bf5a425f 100644
+index 2f9299f407692c51dca17ca38a6135dde259b895..1a7d802e8c3204408402ce58377108ffac2662b9 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -1025,5 +1025,25 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
-      */
-     @NotNull
-     org.bukkit.inventory.EquipmentSlot getHandRaised();
+@@ -1147,4 +1147,26 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
+         return this.getActiveItemHand();
+     }
+     // Paper end - active item API
 +
++    // Paper start - entity jump API
 +    /**
 +     * Get entity jump state.
 +     * <p>
@@ -88,5 +89,5 @@ index c58f7b4a7c05e35056a478a818a9a6cdfe99203f..3f062e0fe9cb632dece9ce3fdc985ab1
 +     * @param jumping entity jump state
 +     */
 +    void setJumping(boolean jumping);
-     // Paper end
++    // Paper end - entity jump API
  }

@@ -5,19 +5,19 @@ Subject: [PATCH] Test changes
 
 
 diff --git a/build.gradle.kts b/build.gradle.kts
-index 517aaae21f8fbd6916ab23d85dac5f74aea9e984..9098a40f944a3c6c0e907013c212eb3f1895e010 100644
+index 50d9182a4845564cd62b026700a7d0517c25e74d..69155f6badcd79b3479654363ca1f1d8a138a7ad 100644
 --- a/build.gradle.kts
 +++ b/build.gradle.kts
 @@ -23,6 +23,7 @@ dependencies {
      testImplementation("org.hamcrest:hamcrest:2.2")
-     testImplementation("org.mockito:mockito-core:5.5.0")
-     testImplementation("org.ow2.asm:asm-tree:9.5")
+     testImplementation("org.mockito:mockito-core:5.11.0")
+     testImplementation("org.ow2.asm:asm-tree:9.7")
 +    testImplementation("org.junit-pioneer:junit-pioneer:2.2.0") // Paper - CartesianTest
  }
  
  val craftbukkitPackageVersion = "1_20_R3" // Paper
-@@ -58,6 +59,12 @@ tasks.compileJava {
-     options.setIncremental(false)
+@@ -53,6 +54,12 @@ tasks.jar {
+     }
  }
  
 +// Paper start - compile tests with -parameters for better junit parameterized test names

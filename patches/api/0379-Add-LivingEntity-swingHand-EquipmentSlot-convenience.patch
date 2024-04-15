@@ -5,14 +5,15 @@ Subject: [PATCH] Add LivingEntity#swingHand(EquipmentSlot) convenience method
 
 
 diff --git a/src/main/java/org/bukkit/entity/LivingEntity.java b/src/main/java/org/bukkit/entity/LivingEntity.java
-index 41ca8fea2aede178bdbe87c05588bce4f2faf8e6..aa20ec645476b2cbb0330c206f163094aebf238e 100644
+index be9fa1b6209a41712767283c6329046ca2795c09..35b0eb94e291dae7a4705fa85b10d23fcd38f49e 100644
 --- a/src/main/java/org/bukkit/entity/LivingEntity.java
 +++ b/src/main/java/org/bukkit/entity/LivingEntity.java
-@@ -1203,5 +1203,23 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
-      */
+@@ -1329,4 +1329,24 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
      @Deprecated
      void setHurtDirection(float hurtDirection);
+     // Paper end - hurt direction API
 +
++    // Paper start - swing hand API
 +    /**
 +     * Makes this entity swing their hand.
 +     *
@@ -30,5 +31,5 @@ index 41ca8fea2aede178bdbe87c05588bce4f2faf8e6..aa20ec645476b2cbb0330c206f163094
 +            this.swingOffHand();
 +        }
 +    }
-     // Paper end
++    // Paper end - swing hand API
  }

@@ -25,7 +25,7 @@ Other changes:
 Co-Authored-By: Emilia Kond <emilia@rymiel.space>
 
 diff --git a/build.gradle.kts b/build.gradle.kts
-index f838b058e6cad9061929509047bbe25c65baecf6..f4d33c9c4c04e1a09259dd9cc7cb909e30506580 100644
+index 8332781de54d73cb5803828e98882a731daed81f..cadb6a2cae98a8df97c392bfbd5a1440bccd16f4 100644
 --- a/build.gradle.kts
 +++ b/build.gradle.kts
 @@ -6,9 +6,30 @@ plugins {
@@ -58,9 +58,9 @@ index f838b058e6cad9061929509047bbe25c65baecf6..f4d33c9c4c04e1a09259dd9cc7cb909e
 +    alsoShade(log4jPlugins.output)
 +    // Paper end
      implementation("org.apache.logging.log4j:log4j-iostreams:2.19.0") // Paper - remove exclusion
-     implementation("org.ow2.asm:asm-commons:9.5")
+     implementation("org.ow2.asm:asm-commons:9.7")
      implementation("org.spongepowered:configurate-yaml:4.2.0-SNAPSHOT") // Paper - config files
-@@ -80,7 +101,7 @@ relocation {
+@@ -75,7 +96,7 @@ relocation {
  }
  
  tasks.shadowJar {
@@ -250,7 +250,7 @@ index 8323f135d6bf2e1f12525e05094ffa3f2420e7e1..a143ea1e58464a3122fbd8ccafe417bd
      }
  }
 diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
-index 1d8e17f4b862e71cc5ef8c5eabfb80dc427aec51..6587cd9ea257d0f6f1308ea8ca4d0245178b2870 100644
+index 48513e585ce02c301983adbe1224e95ff7f9a345..22b9d4bebee30877225b08b46cec6084b12a9c5a 100644
 --- a/src/main/java/net/minecraft/server/MinecraftServer.java
 +++ b/src/main/java/net/minecraft/server/MinecraftServer.java
 @@ -155,7 +155,7 @@ import org.slf4j.Logger;
@@ -413,7 +413,7 @@ index 827579f59d34b61912a67b40624f0f41524185fd..f7d937c6a11e24afe767411428210f3c
      @Override
      public PluginCommand getPluginCommand(String name) {
 diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
-index 4fb377d967d13ed920ea1246e84b3b94cda25be6..659b32d49016a23475f3bbda1548a78101b468ce 100644
+index db36453ff46afded45268b3701488e23305aa2eb..e5df5469f20ccffcbe9cd227df6f5c60e82206bf 100644
 --- a/src/main/java/org/bukkit/craftbukkit/Main.java
 +++ b/src/main/java/org/bukkit/craftbukkit/Main.java
 @@ -13,7 +13,6 @@ import java.util.logging.Logger;
